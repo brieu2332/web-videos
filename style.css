@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Botão Voltar ao Topo */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.scroll-to-top.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scroll-to-top:hover {
+    background: #005bb5;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: #0073e6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 2rem;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Container da seção */
+.hero .container {
+    display: flex;
+    justify-content: space-between; /* Espaça o conteúdo de forma que o texto fique à esquerda e a imagem centralizada */
+    align-items: center;
+    width: 100%;
+}
+
+/* Lado esquerdo - Texto */
+.hero-left {
+    flex: 1;
+    padding: 2rem;
+    width: 50%; /* Largura do texto */
+    text-align: left; /* Garante que o texto esteja alinhado à esquerda */
+}
+
+.hero-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-left p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-left .btn {
+    background: white;
+    color: #0073e6;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Imagem Central */
+.hero-right {
+    flex: 0 0 30%; /* Definido para garantir que a imagem tenha um tamanho fixo */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;     /* Centraliza a imagem verticalmente */
+    width: 50%;              /* Largura ajustável para imagem */
+}
+
+.hero-right img {
+    max-width: 400px; /* Ajuste o valor para aumentar ou diminuir o tamanho da imagem */
+    max-height: 400px; /* Ajuste o valor para aumentar ou diminuir o tamanho da imagem */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Imagem de fundo (lado direito) */
+.background-image {
+    width: 40%;
+    height: 100%;
+    background: url('/img/GameMaker-boneco.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.5; /* Torna a imagem discreta */
+}
+
+/* Features Section */
+.features {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Tutorials Section */
+.tutorials {
+    padding: 2rem 1rem;
+    background: #fff;
+    text-align: center;
+}
+
+.tutorial-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.tutorial-item {
+    background: #0073e6;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        width: 100%; /* Texto ocupa toda a largura */
+        padding: 1rem;
+    }
+
+    .hero-right {
+        width: 100%; /* Imagem ocupa toda a largura */
+        padding: 1rem;
+    }
+
+    .hero-right img {
+        max-width: 200px;
+    }
+
+    .background-image {
+        display: none;
+    }
+}
