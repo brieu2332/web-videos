@@ -34,31 +34,41 @@ body {
     background: #005bb5;
 }
 
+
+
 /* Navbar */
 .navbar {
-    background: #333;
+    background-color: black !important; /* Forçando a cor de fundo para preto */
     color: white;
-    padding: 1rem 0;
-    position: sticky;
+    padding: 0.2rem 0.5rem;
+    height: 50px;
+    width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
+
+
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%; /* Garantir que a altura da navbar seja 100% */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Espaço bem reduzido entre os itens */
+    margin: 0; /* Remover margens */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-size: 1rem; /* Diminuindo ainda mais o tamanho da fonte */
+    line-height: 1; /* Altura de linha reduzida */
 }
 
 /* Hero Section */
@@ -120,23 +130,24 @@ body {
 }
 
 .hero-right img {
-    max-width: 400px; /* Ajuste o valor para aumentar ou diminuir o tamanho da imagem */
-    max-height: 400px; /* Ajuste o valor para aumentar ou diminuir o tamanho da imagem */
+    max-width: 500px; /* Ajuste o valor para aumentar ou diminuir o tamanho da imagem */
+    max-height: 500px; /* Ajuste o valor para aumentar ou diminuir o tamanho da imagem */
     width: auto;
     height: auto;
     display: block;
     margin: 0 auto;
+    z-index: 5;
 }
 
 /* Imagem de fundo (lado direito) */
 .background-image {
-    width: 40%;
+    width: 50%;
     height: 100%;
     background: url('/img/GameMaker-boneco.jpg') no-repeat center center/cover;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 0;
     opacity: 0.5; /* Torna a imagem discreta */
 }
 
@@ -173,6 +184,86 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
+
+/* Seção de Vídeos */
+.videos {
+    padding: 2rem 1rem;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.video-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Certificando-se de que o carrossel ocupa toda a largura */
+    max-width: 1000px; /* Limita a largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel na tela */
+}
+
+.video-grid {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+    justify-content: center; /* Centraliza os itens dentro do grid */
+}
+
+.video-item {
+    min-width: 320px;
+    max-width: 320px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 15px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que o conteúdo dentro das bordas arredondadas não saia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito mais bonito */
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px; /* Arredonda as bordas dos vídeos */
+}
+
+.video-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
 
 /* Footer */
 .footer {
