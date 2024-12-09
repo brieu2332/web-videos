@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+    <div class="feedback-container">
+        <h1>Deixe seu Feedback</h1>
+
+        <!-- Avaliação por estrelas -->
+        <div class="rating-container">
+            <label for="rating">Avaliação: </label>
+            <div class="stars">
+                <input type="radio" name="rating" id="star5" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" name="rating" id="star4" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" name="rating" id="star3" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" name="rating" id="star2" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" name="rating" id="star1" value="1"><label for="star1">&#9733;</label>
+            </div>
+        </div>
+
+        <!-- Campo de comentário -->
+        <div class="comment-container">
+            <label for="comment">O que você achou do curso?</label>
+            <textarea id="comment" placeholder="Escreva seu comentário aqui..."></textarea>
+        </div>
+
+        <!-- Botões -->
+        <div class="buttons-container">
+            <button class="submit-btn" onclick="submitFeedback()">Enviar Feedback</button>
+            <button class="clear-btn" onclick="clearFeedback()">Limpar</button>
+        </div>
+
+        <!-- Mensagem de confirmação -->
+        <div id="confirmation" class="confirmation-message">
+            <p>Seu feedback foi enviado com sucesso! Obrigado!</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para simular o envio do feedback
+        function submitFeedback() {
+            document.getElementById('confirmation').style.display = 'block';
+        }
+
+        // Função para limpar o formulário
+        function clearFeedback() {
+            document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+            document.getElementById('comment').value = '';
+            document.getElementById('confirmation').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -49,4 +49,11 @@ scrollToTopBtn.addEventListener('click', () => {
     });
 });
 
+document.querySelectorAll('.feature-text h2').forEach(item => {
+    item.addEventListener('mouseover', event => {
+        const newImage = event.target.getAttribute('data-image');
+        document.getElementById('feature-image').src = newImage;
+    });
+});
+
 

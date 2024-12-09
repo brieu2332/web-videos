@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #0d1f23;
+    color: #afb3b7;
 }
 
 /* Botão Voltar ao Topo */
@@ -9,8 +11,8 @@ body {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: #0073e6;
-    color: white;
+    background: #2d4a53;
+    color: #afb3b7;
     border: none;
     border-radius: 50%;
     width: 3rem;
@@ -31,24 +33,22 @@ body {
 }
 
 .scroll-to-top:hover {
-    background: #005bb5;
+    background: #69818d;
 }
 
 
 
 /* Navbar */
 .navbar {
-    background-color: black !important; /* Forçando a cor de fundo para preto */
-    color: white;
+    background-color: #132E35 !important; /* Forçando a cor de fundo para preto */
+    color: #AFB3B7;
     padding: 0.2rem 0.5rem;
     height: 50px;
-    width: 100%;
+    width: 98.95%;
     top: 0;
     left: 0;
     z-index: 1000;
 }
-
-
 
 .navbar .container {
     display: flex;
@@ -60,21 +60,33 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Espaço bem reduzido entre os itens */
+    gap: 2rem; /* Espaço entre os itens */
     margin: 0; /* Remover margens */
 }
 
+.nav-links li {
+    margin: 0; /* Remover margens */
+    padding: 0; /* Remover padding */
+}
+
 .nav-links a {
-    color: white;
+    color: #AFB3B7;
     text-decoration: none;
     font-size: 1rem; /* Diminuindo ainda mais o tamanho da fonte */
     line-height: 1; /* Altura de linha reduzida */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Adiciona suavidade ao hover */
+    display: inline-block; /* Garante que o hover seja apenas no link */
+}
+
+.nav-links a:hover {
+    font-size: 1.1rem; /* Aumenta levemente o tamanho da letra */
+    color: #00b4d8; /* Muda a cor para azul claro */
 }
 
 /* Hero Section */
 .hero {
-    background: #0073e6;
-    color: white;
+    background: #2D4A53;
+    color: AFB3B7;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinha o conteúdo à esquerda */
@@ -111,8 +123,8 @@ body {
 }
 
 .hero-left .btn {
-    background: white;
-    color: #0073e6;
+    background: AFB3B7;
+    color: #2D4A53;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
@@ -151,23 +163,68 @@ body {
     opacity: 0.5; /* Torna a imagem discreta */
 }
 
-/* Features Section */
-.features {
+/* Seção de Recursos */
+.resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
     padding: 2rem 1rem;
-    text-align: center;
-    background: #f4f4f4;
+    background: #101820; /* Azul escuro */
+    color: #f2f2f2;       /* Texto claro */
 }
 
-.feature-grid {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+.resource-item {
+    flex: 1 1 calc(33% - 2rem);
+    max-width: 300px;
+    text-align: center;
+    background: #1e1e2f;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Efeito de hover nos itens */
+.resource-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens nos recursos */
+.resource-item img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Títulos */
+
+.resource-item h1 {
+    line-height: 1.5;    margin-bottom: 1rem;
+    color: #00b4d8; /* Azul claro */
+}
+
+.resource-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00b4d8; /* Azul claro */
+}
+
+/* Descrições */
+.resource-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #e0e0e0; /* Cinza claro */
+}
+
 
 /* Tutorials Section */
 .tutorials {
     padding: 2rem 1rem;
-    background: #fff;
+    background: #0D1F23;
+    color: #AFB3B7;
     text-align: center;
 }
 
@@ -178,17 +235,23 @@ body {
 }
 
 .tutorial-item {
-    background: #0073e6;
-    color: white;
+    background: #2D4A53;
+    color: #AFB3B7;
     padding: 1rem;
     text-decoration: none;
     border-radius: 5px;
 }
 
+/* novo  tbm */
+.tutorial-item:hover {
+    background: #69818d;
+}
+
 /* Seção de Vídeos */
 .videos {
     padding: 2rem 1rem;
-    background: #f0f0f0;
+    background: #132E35;
+    color: #AFB3B7;
     text-align: center;
 }
 
@@ -210,8 +273,8 @@ body {
 .video-item {
     min-width: 320px;
     max-width: 320px;
-    background-color: #0073e6;
-    color: white;
+    background-color: #2D4A53;
+    color: AFB3B7;
     border-radius: 15px; /* Bordas arredondadas */
     overflow: hidden; /* Garante que o conteúdo dentro das bordas arredondadas não saia */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito mais bonito */
@@ -235,6 +298,7 @@ body {
 
 .video-item:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    background: #69818D;
 }
 
 .carousel-btn {
@@ -263,12 +327,46 @@ body {
     background: rgba(0, 0, 0, 0.8);
 }
 
+/* Estilização do contêiner do botão */
+.feedback-container {
+    background: #132E35;
+    color: #AFB3B7;
+    text-align: center; /* Centraliza o botão */
+    
+}
+
+/* Estilização do botão */
+.feedback-btn {
+    display: inline-block;
+    background: #132E35;
+    color: #AFB3B7;
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 2px solid #AFB3B7; /* Borda do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: all 0.3s ease; /* Suaviza transições */
+}
+
+/* Hover para mouse em cima */
+.feedback-btn:hover {
+    background-color: #00b4d8; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+    border-color: #00b4d8; /* Cor da borda ao passar o mouse */
+}
+
+/* Efeito de clique */
+.feedback-btn:active {
+    background-color: #AFB3B7; /* Cor de fundo ao clicar */
+    color: #132E35; /* Cor do texto ao clicar */
+    border-color: #132E35; /* Cor da borda ao clicar */
+}
 
 
 /* Footer */
 .footer {
-    background: #333;
-    color: white;
+    background: #132E35;
+    color: AFB3B7;
     text-align: center;
     padding: 1rem 0;
 }
@@ -281,8 +379,12 @@ body {
 }
 
 .social-links a {
-    color: white;
+    color: AFB3B7;
     text-decoration: none;
+}
+
+.social-links a {
+    color: 69818D;
 }
 
 /* Responsividade */
